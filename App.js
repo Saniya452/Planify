@@ -1,12 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Onboarding from './src/screens/auth/Onboarding';
+import Signin from './src/screens/auth/Signin';
+import Signup from './src/screens/auth/Signup';
+// import GestureHandlerRefContext from '../utils/GestureHandlerRefContext';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+const Stack = createStackNavigator();
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}} >
+      <Stack.Screen name="Onboarding" component={Onboarding}/>
+      <Stack.Screen name="Signin" component={Signin}/>
+      <Stack.Screen name="Signup" component={Signup}/>
+    </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -18,3 +29,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
