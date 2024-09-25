@@ -1,14 +1,16 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import colors from "../../../components/constants/colors";
+
+const { width } = Dimensions.get("window");
 
 const style = StyleSheet.create({
   container: {
     flex:1,
-    marginHorizontal: 24,
+    marginHorizontal: width * 0.06, // Responsive horizontal margin
   },
   footerText:{
     color:colors.grey,
-    fontSize: 15,
+    fontSize: width * 0.038, // Responsive font size
     textAlign:'center',
     marginTop: 28
   },
