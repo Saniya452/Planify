@@ -4,7 +4,10 @@ import styles from "./styles";
 
 const Checkbox = ({ checked, onPress }) => {
   return (
-    <Pressable onPress={onPress} style={[styles.container, checked ? styles.checkedBox : {}]}>
+    <Pressable
+      onPress={onPress}
+      style={[styles.container, checked ? styles.checkedBox : {}]}
+    >
       {checked ? <View style={styles.innerSquare} /> : null}
     </Pressable>
   );

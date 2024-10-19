@@ -19,7 +19,8 @@ const Signin = ({ navigation }) => {
         Not Registered?
         <Text
           onPress={() => navigation.navigate("Signup")}
-          style={styles.footerLink}>
+          style={styles.footerLink}
+        >
           {" "}
           Sign up!
         </Text>

@@ -7,13 +7,13 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.purple,
     borderRadius: 10,
-    paddingVertical: height * 0.02, // Responsive vertical padding (2% of screen height)
-    paddingHorizontal: width * 0.05, // Responsive horizontal padding (5% of screen width)
-    marginVertical: height * 0.01, // Responsive vertical margin (1% of screen height)
+    paddingVertical: height * 0.02,
+    paddingHorizontal: width * 0.05,
+    marginVertical: height * 0.01,
   },
   text: {
     color: colors.white,
-    fontSize: width * 0.045, // Responsive font size (4.5% of screen width)
+    fontSize: width * 0.045,
     fontWeight: "bold",
     textAlign: "center",
   },
